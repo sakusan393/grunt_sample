@@ -17,6 +17,13 @@ module.exports = (grunt) ->
   require('matchdep').filterDev('grunt-*').forEach (name)->
     grunt.loadNpmTasks(name);
 
+  #grunt-open時使用するGoogleChromeCanary名を設定
+  #winとmacで名前が異なる
+  BROWSER = 'Google Chrome Canary'
+  if process.platform == 'win32'
+    #winでは、"chrome"でGoogleChromeCanaryが起動
+    BROWSER = 'chrome'
+
   grunt.initConfig
     watch:
       coffee:
@@ -123,8 +130,15 @@ module.exports = (grunt) ->
     open:
       develop:
         path: "#{ip}:9000"
-        app: "chrome"
+        app: BROWSER
 
+    'ftp-deploy':
+      build:
+        auth:
+          host: 'ssl102.heteml.jp'
+          authKey: 'key1'
+        src: 'dist'
+        dest: 'web/393/grunt-sample/' + grunt.template.today('yyyymmdd_HHMMss')
 
   grunt.registerTask "default", [
     "clean:dist"
