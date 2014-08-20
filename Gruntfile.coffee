@@ -101,8 +101,8 @@ module.exports = (grunt) ->
           pretty:true
     concat:
       develop:
-        src:["js/*.js"]
-        dest:"js/main.js"
+        src:["js/asset.js","js/main.js"]
+        dest:"js/all.js"
 
     pngmin:
       develop:
@@ -120,7 +120,7 @@ module.exports = (grunt) ->
         compress: true
       develop:
         files:
-          "dist/js/main.min.js": ["js/main.js"]
+          "dist/js/all.min.js": ["js/all.js"]
 
     clean:
       cjs_image:
