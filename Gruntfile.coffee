@@ -7,7 +7,7 @@ module.exports = (grunt) ->
   for dev of ifaces
     alias = 0
     ifaces[dev].forEach (details) ->
-      if details.family is "IPv4"
+      if details.family is "IPv4" and details.internal == false
         console.log ":", dev , ((if alias then ":" + alias else "")), details.address
         ip = details.address
         ++alias
@@ -29,7 +29,7 @@ module.exports = (grunt) ->
       coffee:
         files: ["src/coffee/*"]
         tasks: [
-          "coffee","concat"
+          "coffee","concat","uglify"
         ]
         options:
           livereload: true
@@ -49,7 +49,7 @@ module.exports = (grunt) ->
           livereload: true
       copy:
         files: ["src/fla/*.js"]
-        tasks:["pngmin","copy:cjs","concat"]
+        tasks:["pngmin","copy:cjs","concat","uglify"]
         options:
           livereload: true
 
@@ -140,7 +140,9 @@ module.exports = (grunt) ->
         src: 'dist'
         dest: 'web/393/grunt-sample/' + grunt.template.today('yyyymmdd_HHMMss')
 
-  grunt.registerTask "default", [
+  grunt.registerTask "default", ["start"]
+
+  grunt.registerTask "start", [
     "clean:dist"
     "coffee"
     "compass"
