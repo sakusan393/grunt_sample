@@ -6,14 +6,14 @@
 
 ####nodejsをインストール
 * [http://nodejs.org/](http://nodejs.org/)  
-INSTALL クリックでインストーラーをダウンロードして実行
+↑のサイトからINSTALL クリックでインストーラーをダウンロードして実行
 
 ####Rubyをインストール(compass用)
 * [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)  
-※32bit版のインストーラーをダウンロードして実行
+※インストーラーをダウンロードして実行(32bit版がよいかも)
 
 ####compassをインストール
-* コマンドプロンプトにて、 `gem install compass`  
+* コマンドプロンプトで、 `gem install compass` を実行  
 ※コマンドプロンプトのカレントディレクトリはどこでもよい  
 ※Rubyが正しくインストールされていればgemコマンド使えるはず
 
@@ -21,7 +21,7 @@ INSTALL クリックでインストーラーをダウンロードして実行
 ----
 
 ##node_modules(各種プラグイン)を一括でインストール
-* コマンドプロンプトにて、`npm install`  
+* コマンドプロンプトにて、`npm install` を実行  
 ※コマンドプロンプトのカレントディレクトリはプロジェクトのルート階層とする
 
 ----
