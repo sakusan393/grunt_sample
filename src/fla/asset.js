@@ -9,11 +9,8 @@ lib.properties = {
 	fps: 30,
 	color: "#FFFFFF",
 	manifest: [
-		{src:"images/canvas/bgimage2.png", id:"bgimage2"},
 		{src:"images/canvas/image0.png", id:"image0"},
-		{src:"images/canvas/image1.png", id:"image1"},
-		{src:"images/canvas/image2.png", id:"image2"},
-		{src:"images/canvas/unitako.png", id:"unitako"}
+		{src:"images/canvas/image1.png", id:"image1"}
 	]
 };
 
@@ -21,12 +18,6 @@ lib.properties = {
 
 // symbols:
 
-
-
-(lib.bgimage2 = function() {
-	this.initialize(img.bgimage2);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,413,308);
 
 
 (lib.image0 = function() {
@@ -39,18 +30,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,169,54);
 	this.initialize(img.image1);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,139,54);
-
-
-(lib.image2 = function() {
-	this.initialize(img.image2);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,181,54);
-
-
-(lib.unitako = function() {
-	this.initialize(img.unitako);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,224);
 
 
 (lib.OsyareInner1 = function() {
@@ -82,7 +61,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,169,54);
 	this.instance = new lib.OsyareInner1();
 	this.instance.setTransform(69.5,27,1,1,0,0,0,69.5,27);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:1049.7},79).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:2.55,scaleY:2.55,x:553.4},39).to({scaleX:1,scaleY:1,x:1049.7},40).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,139,54);
@@ -95,7 +74,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,139,54);
 	this.instance = new lib.OsyareInner();
 	this.instance.setTransform(84.5,27,1,1,0,0,0,84.5,27);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:2.97,scaleY:2.97,x:-404.2},29).to({scaleX:1,scaleY:1,x:-909.7},30).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:2.47,scaleY:2.47,x:-387.3},28).to({scaleX:1,scaleY:1,x:-909.7},31).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,169,54);

@@ -1,5 +1,3 @@
-//usernameとpasswordを任意の値に設定
-//.ftppassにリネームする
 {
   "key1": {
     "username": "my_id",

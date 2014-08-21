@@ -12,6 +12,11 @@ INSTALL クリックでインストーラーをダウンロードして実行
 * [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)  
 ※32bit版のインストーラーをダウンロードして実行
 
+####compassをインストール
+* コマンドプロンプトにて、 `gem install compass`  
+※Rubyが正しくインストールされていればgemコマンド使えるはず
+
+
 ----
 
 ##node_modules(各種プラグイン)を一括でインストール
@@ -23,11 +28,22 @@ INSTALL クリックでインストーラーをダウンロードして実行
 ##実行コマンド
 
 * `grunt start`  
-起動
+以下のタスクが実行される  
+"clean:dist"/
+"coffee"/
+"compass"/
+"jade"/
+"copy"/
+"concat"/
+"uglify"/
+"connect"/
+"open"/
+"watch"
+
 
 ---
 
-#プラグイン一覧
+#主なプラグイン
 
 ##grunt-contrib-coffee
 * coffeescript→jsのコンパイル

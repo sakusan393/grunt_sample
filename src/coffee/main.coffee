@@ -14,13 +14,13 @@ handleComplete = ->
 initCJS = ()->
   container = new createjs.Container();
   stage.addChild container
-  for val in [0...10]
+  for val in [0...1]
     osyare = new lib.Osyare();
     osyare.x = 800
     osyare.y = Math.random() * 300
     container.addChild osyare
     osyare.gotoAndPlay(Math.random()*60)
-  for val in [0...5]
+  for val in [0...1]
     yabai = new lib.Osyare1();
     yabai.x = -100
     yabai.y = Math.random() * 300
