@@ -12,10 +12,6 @@ INSTALL クリックでインストーラーをダウンロードして実行
 * [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)  
 ※32bit版のインストーラーをダウンロードして実行
 
-####compassをインストール
-* コマンドプロンプトにて、`gem install compass`  
-(Rubyが正しくインストールできてればgemコマンド使えるはず)
-
 ----
 
 ##node_modules(各種プラグイン)を一括でインストール

@@ -75,42 +75,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,139,54);
 p.nominalBounds = new cjs.Rectangle(0,0,169,54);
 
 
-(lib.Osyare2Inner = function() {
-	this.initialize();
-
-	// レイヤー 1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#FF3399").s().p("AjIDJQhUhTAAh2QAAh1BUhTQBThUB1AAQB2AABTBUQBUBTAAB1QAAB2hUBTQhTBUh2AAQh1AAhThUg");
-
-	this.addChild(this.shape);
-}).prototype = p = new cjs.Container();
-p.nominalBounds = new cjs.Rectangle(-28.5,-28.5,57,57);
-
-
-(lib.BackgroundImage = function() {
-	this.initialize();
-
-	// レイヤー 1
-	this.instance = new lib.bgimage2();
-	this.instance.setTransform(202.6,37.1);
-
-	this.addChild(this.instance);
-}).prototype = p = new cjs.Container();
-p.nominalBounds = new cjs.Rectangle(0,0,800,400);
-
-
-(lib.Osyare2 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// レイヤー 1
-	this.instance = new lib.Osyare2Inner();
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:2.19,scaleY:2.19},14,cjs.Ease.get(1)).to({scaleX:1,scaleY:1},15,cjs.Ease.get(-1)).wait(1));
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-28.5,-28.5,57,57);
-
-
 (lib.Osyare1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -131,11 +95,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,139,54);
 	this.instance = new lib.OsyareInner();
 	this.instance.setTransform(84.5,27,1,1,0,0,0,84.5,27);
 
-	this.instance_1 = new lib.Osyare2();
-	this.instance_1.setTransform(488.1,368.1);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance},{t:this.instance_1}]},59).wait(1));
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:-915.5},59).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:2.97,scaleY:2.97,x:-404.2},29).to({scaleX:1,scaleY:1,x:-909.7},30).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,169,54);
@@ -155,13 +115,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,169,54);
 	this.instance_1 = new lib.Osyare1();
 	this.instance_1.setTransform(-81,237.1,1,1,0,0,0,69.5,27);
 
-	// bg
-	this.instance_2 = new lib.BackgroundImage();
-	this.instance_2.setTransform(244,185.5,1,1,0,0,0,244,185.5);
-
-	this.addChild(this.instance_2,this.instance_1,this.instance);
+	this.addChild(this.instance_1,this.instance);
 }).prototype = p = new cjs.Container();
-p.nominalBounds = new cjs.Rectangle(249.5,200,1131.2,345.1);
+p.nominalBounds = new cjs.Rectangle(249.5,200,1131.2,264.1);
 
 })(lib = lib||{}, images = images||{}, createjs = createjs||{});
 var lib, images, createjs;
