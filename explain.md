@@ -26,8 +26,8 @@ createjsで自動生成されるjsで個々のアニメパーツをアセット�
 各パーツは別途jsで制御したい。
 
 ###デモソース一式
-* [https://github.com/sakusan393/grunt_sample](github)
-* [](zip)
+* [zip](http://393.bz/grunt-sample/grunt_sample.zip)
+* [github](https://github.com/sakusan393/grunt_sample)
 
 ---
 
