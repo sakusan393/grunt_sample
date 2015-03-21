@@ -1,6 +1,7 @@
 workspace.xml
 .idea
 .sass-cache
+*.iml
 
 bower_components
 dist

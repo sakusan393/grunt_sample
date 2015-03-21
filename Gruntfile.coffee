@@ -4,15 +4,17 @@ module.exports = (grunt) ->
   os = require("os")
   ip = "localhost"
   ifaces = os.networkInterfaces()
+  console.log ifaces
   for dev of ifaces
+    console.log dev
     alias = 0
     ifaces[dev].forEach (details) ->
       if details.family is "IPv4" and details.internal == false
-        console.log ":", dev , ((if alias then ":" + alias else "")), details.address
         ip = details.address
         ++alias
       return
 
+  console.log "ほげ"
   #package.jsonに登録されてるタスクをまとめて定義
   require('matchdep').filterDev('grunt-*').forEach (name)->
     grunt.loadNpmTasks(name);
@@ -115,12 +117,9 @@ module.exports = (grunt) ->
           ]
 
     uglify:
-      options:
-        mangle: true
-        compress: true
       develop:
         files:
-          "dist/js/all.min.js": ["js/all.js"]
+          "dist/js/all.min.js": "js/all.js"
 
     clean:
       cjs_image:
